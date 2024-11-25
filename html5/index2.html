@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма регистрации</title>
+  <link rel="stylesheet" href="style/style2.css">
+  <script src="js/script2.js" defer></script>
+</head>
+<body>
+  <form id="registration" onsubmit="return validateForm()">
+    <fieldset>
+      <legend>Форма регистрации</legend>
+      <table class="alignment">
+        <tr>
+          <td><label for="name">ФИО</label></td>
+          <td><input id="name" name="name" type="text" required></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input id="email" name="email" type="email" required></td>
+        </tr>
+        <tr>
+          <td><label for="phone">Номер телефона</label></td>
+          <td><input id="phone" name="phone" type="tel" required placeholder="+7 (___) ___-__-__"></td>
+        </tr>
+        <tr>
+          <td><label for="dateofbirth">Дата рождения</label></td>
+          <td><input id="dateofbirth" name="dateofbirth" type="date"></td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend>Параметры доставки</legend>
+      <table>
+        <tr>
+          <td><label for="address">Адрес</label></td>
+          <td><textarea id="address" name="address" rows="5"></textarea></td>
+        </tr>
+        <tr>
+          <td><label for="postcode">Почтовый индекс</label></td>
+          <td><input id="postcode" name="postcode" type="text" pattern="^[0-9]{6}$" title="Введите 6-значный почтовый индекс"></td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend>Предпочитаемый способ получения уведомлений</legend>
+      <table>
+        <tr>
+          <td><input id="emailmessage" name="notification" type="radio" required></td>
+          <td><label for="emailmessage">По Email</label></td>
+        </tr>
+        <tr>
+          <td><input id="phonemessage" name="notification" type="radio"></td>
+          <td><label for="phonemessage">По телефону</label></td>
+        </tr>
+        <tr>
+          <td><input id="nomessage" name="notification" type="radio"></td>
+          <td><label for="nomessage">Не уведомлять меня</label></td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <button type="submit">Отправить данные</button>
+    </fieldset>
+  </form>
+</body>
+</html>
