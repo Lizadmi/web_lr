@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перемещение элементов и список альбомов</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <h1>Задание 1. Функция перемещения</h1>
+  <div id="containers">
+    <div class="container" data-container="1">
+      <h2>Контейнер 1</h2>
+      <div class="item" draggable="true">Элемент 1</div>
+      <div class="item restricted" draggable="true">Элемент 2</div>
+    </div>
+    <div class="container" data-container="2">
+      <h2>Контейнер 2</h2>
+      <div class="item" draggable="true">Элемент 3</div>
+    </div>
+    <div class="container" data-container="3">
+      <h2>Контейнер 3</h2>
+    </div>
+  </div>
+
+  <h1>Задание 2. Список альбомов</h1>
+  <ul id="album-list">
+    <li draggable="true" class="album">Альбом 1</li>
+    <li draggable="true" class="album">Альбом 2</li>
+    <li draggable="true" class="album">Альбом 3</li>
+  </ul>
+  <h2>Очередь воспроизведения</h2>
+  <ul id="queue"></ul>
+</body>
+</html>
